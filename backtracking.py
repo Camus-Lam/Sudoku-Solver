@@ -168,10 +168,7 @@ def FC(unAssignedVars, csp, allSolutions, trace):
        must make sure that we restore all pruned values before
        returning.
     '''
-    #your implementation for Question 2 goes in this function body.
-    #you must not change the function parameters.
-    #Implementing handling of the trace parameter is optional
-    #but it can be useful for debugging
+
     if unAssignedVars.empty():
         if trace: print("{} Solution Found".format(csp.name()))
         soln = []
@@ -212,9 +209,7 @@ def GacEnforce(constraints, csp, reasonVar, reasonVal):
        from the current domains of the variables.
        Return "OK" if completed "DWO" if found
        a domain wipe out.'''
-    #your implementation for Question 3 goes in this function body
-    #you must not change the function parameters
-    #ensure that you return one of "OK" or "DWO"
+
     while not len(constraints) == 0:
         cnstr = constraints.pop()
         for var in cnstr.scope():
@@ -243,10 +238,7 @@ def GAC(unAssignedVars, csp, allSolutions, trace):
        must make sure that we restore all pruned values before
        returning.
     '''
-    #your implementation for Question 3 goes in this function body
-    #You must not change the function parameters.
-    #implementing support for "trace" is optional, but it might
-    #help you in debugging
+
     if unAssignedVars.empty():
         if trace: print("{} Solution Found".format(csp.name()))
         soln = []
